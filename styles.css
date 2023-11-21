@@ -1,0 +1,101 @@
+:root {
+    --accent_color: #313499;
+    --main_background_color: #010324;
+}
+
+@font-face {
+    font-family: "8bitOperatorPlus";
+    src: url(fonts/8bitOperatorPlus-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "8bitOperatorPlus";
+    src: url(fonts/8bitOperatorPlus-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+* {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: var(--main_background_color);
+}
+
+h1 {
+    text-align: center;
+    font-family: "8bitOperatorPlus", 'Courier New', Courier, monospace;
+}
+
+header nav a {
+    text-decoration: none;
+}
+
+
+hr {
+    background-color: var(--accent_color, blue);
+    height: 1px;
+    border: none;
+}
+
+footer {
+    & p {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+picture,
+img {
+    width: 100%;
+    max-width: 600px
+}
+
+@media screen and (min-width:768px) {
+
+    header {
+        & nav {
+            display: flex;
+            margin: 1em;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        & a {
+            margin: 1em;
+            padding: 1em;
+            border: 3px solid var(--accent_color, blue);
+            background-color: aliceblue;
+            font-size: 1.5em;
+            color: black;
+
+            transition-property: background-color;
+            transition-duration: 0.5s;
+        }
+
+        & a:hover {
+            background-color: var(--accent_color, blue);
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    header {
+        & nav {
+            display: flex;
+            margin: 1dvh;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        & a {
+            padding: .75rem;
+            font-size: 1.5em;
+        }
+    }
+}

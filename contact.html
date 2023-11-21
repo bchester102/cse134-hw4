@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        input, option, optgroup, select, textarea{
+            color: black;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        input[type="submit"]{
+            margin: 2px
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        fieldset {
+            display:flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/resume.html">Resume</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+        <hr>
+    </header>
+    <main>
+        <h1>Contact</h1>
+        <form method="get">
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label for="name">Enter your name:</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Enter your email:</label>
+                <input type="email" name="email" id="email" required>
+                <label for="who">Who are you?</label>
+                <select name="who" id="who">
+                    <optgroup label="Recruiter">
+                        <option value="big">Big Company</option>
+                        <option value="small">Small Company</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="friend">Friend</option>
+                        <option value="stranger">Stranger</option>
+                    </optgroup>
+                </select>
+                <label for="reason">Why are you contacting?</label>
+                <input list="reasons" name="reason" id="reason">
+                <datalist id="reasons">
+                    <option value="Job Offer">
+                    <option value="More Info">
+                    <option value="Getting to know you better">
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>Message</legend>
+                <textarea></textarea>
+            </fieldset>
+
+            <input type="submit" value="Send Message!">
+        </form>
+    </main>
+    <footer>
+        <hr>
+        <p>Made with &lt;3 by Bradley Chester </p>
+    </footer>
+
+</body>
+
+</html>
