@@ -20,12 +20,18 @@
         form {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            justify-content: center;
+            align-items: center;
+            width: 30dvw;
+        }
+
+        main {
+            /* display: flexbox; */
         }
 
         fieldset {
-            display:flex;
-            flex-direction: column;
+            /* display:flex; */
+            /* flex-direction: column; */
         }
     </style>
 </head>
@@ -40,39 +46,23 @@
         <hr>
     </header>
     <main>
-        <h1>Contact</h1>
-        <form method="get">
+        <h1>Contact Me!</h1>
+        <form method="post" action="https://httpbin.org/post">
             <fieldset>
                 <legend>Contact Info</legend>
-                <label for="name">Enter your name:</label>
+                <label for="name">Name:</label>
                 <input type="text" name="name" id="name" required>
-                <label for="email">Enter your email:</label>
+                <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
-                <label for="who">Who are you?</label>
-                <select name="who" id="who">
-                    <optgroup label="Recruiter">
-                        <option value="big">Big Company</option>
-                        <option value="small">Small Company</option>
-                    </optgroup>
-                    <optgroup label="Other">
-                        <option value="friend">Friend</option>
-                        <option value="stranger">Stranger</option>
-                    </optgroup>
-                </select>
-                <label for="reason">Why are you contacting?</label>
-                <input list="reasons" name="reason" id="reason">
-                <datalist id="reasons">
-                    <option value="Job Offer">
-                    <option value="More Info">
-                    <option value="Getting to know you better">
-                </datalist>
+                <input type="hidden" name="possible_bot" value="true">
             </fieldset>
             <fieldset>
-                <legend>Message</legend>
-                <textarea></textarea>
+                <legend>Comment</legend>
+                <textarea name="comment"></textarea>
             </fieldset>
 
             <input type="submit" value="Send Message!">
+            <output></output>
         </form>
     </main>
     <footer>
