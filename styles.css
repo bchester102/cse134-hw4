@@ -1,6 +1,8 @@
 :root {
     --accent_color: #313499;
     --main_background_color: #010324;
+    --light_mode_background_color: #cae9f3;
+    --text-color: whitesmoke;
 }
 
 @font-face {
@@ -18,7 +20,7 @@
 }
 
 * {
-    color: whitesmoke;
+    color: var(--text-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
